@@ -59,10 +59,12 @@
 		</table>
 	</form>
 </div>
+<form action="/ncs_java_yhs3/deleteBoard.jsp?idx=<%=bIdx %>" method="post" id="toDelete">
+</form>
 <div>
 	<button type="button" onclick="toList()">목록</button>
 	<button type="submit" onclick="okUpdate()">수정</button>
-	<button type="button" onclick="okDelete()">삭제</button>
+	<button type="submit" onclick="okDelete()" >삭제</button>
 </div>
 
 

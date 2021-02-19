@@ -31,5 +31,5 @@ function toBack(){
 
 function okDelete(){
 	alert("삭제완료");
-	window.location.href="/ncs_java_yhs3/index.jsp?pp=list";
+	document.getElementById("toDelete").submit();
 }

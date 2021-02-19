@@ -110,6 +110,18 @@ public class CommentDao {
 		return null;
 		
 	}
+	
+	public int deleteCommentByBIdx(int bIdx) {
+		String sql = "DELETE FROM COMMENT_TBL WHERE BIDX = ?";
+		try(Connection con = JdbcUtil.getConnection();
+				PreparedStatement pstmt = con.prepareStatement(sql)){
+				pstmt.setInt(1, bIdx);
+				return pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 }
 
